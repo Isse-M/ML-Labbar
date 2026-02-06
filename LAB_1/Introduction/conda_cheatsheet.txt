@@ -1,0 +1,54 @@
+Getting started with Conda
+--------------------------
+https://conda.io/projects/conda/en/latest/user-guide/tasks/index.html
+
+1. Install python (version 3.9, 3.10 or 3.11)
+(Ubuntu) sudo apt-get install python3.10.4
+(macOS) brew install python@3.10.4
+(windows) https://www.python.org/downloads/windows/
+
+2. Open a new terminal and installation
+python --version
+
+3. Install Conda or Anaconda 
+https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
+
+4. Test instalation
+conda list
+
+5. List existing environments
+conda env list
+
+6.1. Create a new environment
+conda create --name {env}
+
+6.2. Optionally, specify a python version
+conda create --name {env} python=3.10.4
+
+7. Activate environment
+conda activate {env}
+
+8. Choose between the options
+
+8.1. Install other packages with conda
+conda install {pkg1} {pkg2} ... 
+Example for lab1:
+conda install -c conda-forge notebook nb_conda_kernels jupyterlab numpy pandas scikit-learn matplotlib seaborn ipykernel notebook
+
+8.2. Install specific version of package
+conda install {pkg}={version}
+
+8.3. Install packages from a list of requirements
+conda install --file requirements.txt
+
+9. List all installed packages
+conda list
+
+10. Create a list of requirements
+conda list -e > requirements.txt
+
+11. Deactivate environment
+conda deactivate {env}
+
+12. Delete environment
+conda remove -n ENV_NAME --all

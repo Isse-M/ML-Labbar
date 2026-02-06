@@ -1,0 +1,54 @@
+Getting started with venv
+--------------------------
+https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
+
+1. Install python (version 3.9, 3.10 or 3.11)
+
+2. Open a new terminal and test instalation
+python --version
+
+3. Optionally, find where python is installed
+which python
+OR
+(windows) where python
+
+4. Create a new environment
+python -m venv {.venv}
+
+5. Activate environment
+source {.venv}/bin/activate
+OR
+(windows) {.venv}\Scripts\activate
+(windows cmd) {.venv}\Scripts\activate.bat
+(windows powershell) {.venv}\Scripts\Activate.ps1
+
+6. List all installed packages
+pip freeze
+
+7.1. Optionally, upgrade pip
+python3 -m pip install --upgrade pip
+OR
+(windows) py -m pip install --upgrade pip
+
+7.2. Install other packages with pip
+pip install {pkg1} {pkg2} ... 
+Example for lab1:
+pip install notebook jupyterlab numpy pandas scikit-learn matplotlib seaborn ipykernel notebook
+
+7.3. Install specific version of package
+pip install {pkg}={version}
+
+7.4. Install packages from a list of requirements
+pip install requirements.txt
+
+8. List all installed packages
+pip freeze
+
+9. Create a list of requirements
+pip freeze > requirements.txt
+
+10. Deactivate environment
+deactivate
+
+11. Delete environment
+rm -r {.venv}

@@ -1,0 +1,62 @@
+The best way to manage python environments
+------------------------------------------
+https://alysivji.github.io/setting-up-pyenv-virtualenvwrapper.html
+
+
+1. Install iTerm2 and open a new terminal
+
+2. Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+3. Install pyenv
+brew install pyenv
+
+4. Init pyenv
+pyenv init
+
+5. See available python versions
+pyenv install --list
+
+6. Install python version
+pyenv install {version}
+
+7. Set default version
+pyenv global 3.10.4
+
+8. Check python versions installed
+pyenv versions
+
+9. Activate different versions of Python
+pyenv shell {version}
+
+8. Download virtual environment tools
+brew install pyenv-virtualenvwrapper
+
+9.1. Append to ~/.bash_profile
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+export WORKON_HOME=$HOME/.virtualenvs
+
+9.2. Reload shell
+source ~/.bash_profile
+
+10. Install virtualenvwrapper (repeat every time you install a new python version)
+pyenv shell {version}
+pyenv virtualenvwrapper_lazy
+
+11. List all environments
+workon
+
+12. Create new environment
+pyenv shell {version}
+mkvirtualenv {env}
+
+13. Activate environment
+workon {env}
+
+14. Deactivate environment
+deactivate
+
+15. Benefit from all easy commands from virtualenvwrapper
+https://virtualenvwrapper.readthedocs.io/en/latest/
+
+16. Install packages in your activated env using pip
